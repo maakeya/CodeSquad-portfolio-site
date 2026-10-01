@@ -224,6 +224,9 @@ section {
 }
 
 section#hero {
+  min-height: 100vh;
+  background-color: #fff0f5;
+  background-image: 
   background: linear-gradient(rgba(255, 182, 193, 0.9), rgba(255, 182, 193, 0.9)),
     url("/assets/background_image.jpg");
   padding-bottom: 4px;

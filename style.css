@@ -183,7 +183,7 @@ h5,
   text-decoration: none;
   color: #fff;
 }
-  /* Hero section styling */
+/* Hero section styling */
 .hero_content {
   padding: var(--space-3xl) 0;
 }
@@ -200,28 +200,14 @@ h5,
 section {
   padding: var(--space-2xl) var(--space-l);
 }
-/* Pink floral background*/
+
 section#hero {
-  min-height: 100vh;
-  background-color: #fff0f5;
-  background-image: url("https://github.com/maakeya/CodeSquad-portfolio-site/blob/main/77B16154-C04C-45AA-9F2D-D34D0595A1FD.png?raw=true");
+  background: linear-gradient(rgba(26, 26, 64, 0.9), rgba(26, 26, 64, 0.9)),
+    url("/assets/background_image.jpg");
+  padding-bottom: 4px;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #501635;
-  --color-accent: #501635;
+  background-position: top;
+  background-attachment: scroll;
+  color: #fafafa;
+  --color-accent: #8a2be2;
 }
-  .hero_social a {
-    color:#501635;
-  }
-  /* Smaller screens */
-  @media (max-width:468px) {
-    .flex {
-      flex-wrap: wrap;
-    }
-    .flex_around,
-    .flex_between {
-      justify-content:center;
-    }
-  }
-  

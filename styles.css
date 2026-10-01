@@ -305,3 +305,16 @@ footer {
     scroll-behavior: auto;
   }
 }
+/*Stack the main page sections vertically*/
+main {
+  display:block;
+  width:100%;
+}
+main > section {
+  width: 100%;
+}
+/*keep the other sections outside the hero*/
+#hero {
+  display:block;
+}
+  

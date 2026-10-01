@@ -6,82 +6,112 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Maakeya Allston | My Portfolio</title>
   </head>
+
   <body>
     <header class="site_header">
       <div class="wrapper_inner">
         <nav class="site_header_nav" aria-label="Main navigation">
           <ul role="list" class="flex flex_center">
-            <li><a href="#0">HOME</a></li>
+            <li><a href="#hero">HOME</a></li>
             <li><a href="#about">TECH CAREERS</a></li>
             <li><a href="#work">ASSIGNMENTS</a></li>
-            <li><a href="#contact">TRAVEL</a></li>
+            <li><a href="#travel">TRAVEL</a></li>
           </ul>
         </nav>
       </div>
     </header>
+
     <main>
-      <!-- My name, hometown, and profile links-->
+      <!-- Name, hometown, and profile links -->
       <section id="hero">
         <div class="wrapper">
           <div class="wrapper_inner">
             <div class="text_center hero_content">
-              <h1 class="h2">Maakeya Allston</h1>
+              <h1>Maakeya Allston</h1>
               <p class="h5">ASPIRING TECH PROFESSIONAL</p>
             </div>
           </div>
-          <ul role="list" class="flex flex_between hero_social">
-            <address>New York, NY</address>
+
+          <div class="flex flex_between hero_social">
+            <p>New York, NY</p>
+
             <ul role="list" class="flex">
               <li>Find me online</li>
               <li>
-                <a href="https://github.com/maakeya/CodeSquad-portfolio-site" target="_blank">
-                  <img src="/assets/icon-github.svg" alt="GitHub" width="24" height="24" />
+                <a
+                  href="https://github.com/maakeya"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/maakeya-allston-shrm-ta-63b76b104/" target="_blank">
-                  <img src="/assets/linkedin-icon-free-png.webp" alt="LinkedIn" width="24" height="24" />
+                <a
+                  href="https://www.linkedin.com/in/maakeya-allston-shrm-ta-63b76b104/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
                 </a>
               </li>
             </ul>
-          </ul>
+          </div>
         </div>
-        <!--Three careers I want to explore -->
-        <section id="about">
-  <div class="wrapper">
-    <div class="text_center">
-      <h2>
-        My Future in Tech
-      </h2>
-      <p>Three careers I want to explore</p>
-    </div>
-    <div class="career-boxes">
-      <article class="career-box">
-        <img src="/assets/OIP (4).webp" />
-        <h3> UI Developer </h3>
-      <p> Creating beautiful, usable interfaces.</p>
-      </article>
-      <article class="career-box">
-        <img src="https://www.bing.com/images/search?view=detailV2&ccid=hNNRLU33&id=D953E578D7D522F4B968A1A88FF5A904761CA8F3&thid=OIP.hNNRLU33mxeOTvLmyKo_KQHaHa&mediaurl=https%3A%2F%2Fimg.freepik.com%2Fpremium-photo%2Ffemale-developer-background_665280-9658.jpg%3Fw%3D2000&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.84d3512d4df79b178e4ef2e6c8aa3f29%3Frik%3D86gcdgSp9Y%252booQ%26pid%3DImgRaw%26r%3D0&exph=2000&expw=2000&q=ui+developer+women+&FORM=IRPRST&ck=84896258598C576778B6ECF876D1E86B&selectedIndex=24&itb=0&cw=1222&ch=542&ajaxhist=0&ajaxserp=0" alt="Women Developer" />
-        <h3>Front-End Developer</h3>
-        <p>Bring websites to life with code.</p>
-      </article>article>
-      <article class="career-box">
-        <img src="https://www.bing.com/images/search?view=detailV2&ccid=PSFNUzyO&id=A5AD17BA3ACD1A27A6D8F7876D146E7C3583A2E3&thid=OIP.PSFNUzyOA9pFbzGjuPEDGQHaEu&mediaurl=https%3A%2F%2Fassets.designtemplate.io%2FWebsite-Developer-Girl-Character-Illustration-700.webp&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.3d214d533c8e03da456f31a3b8f10319%3Frik%3D46KDNXxuFG2H9w%26pid%3DImgRaw%26r%3D0&exph=447&expw=700&q=ui+developer+women+&FORM=IRPRST&ck=08932BD166B402A771C703D84B7E2CCD&selectedIndex=18&itb=0&cw=1222&ch=542&ajaxhist=0&ajaxserp=0" alt="software development"
-          >/
-        <h3>Software Engineer</h3>
-        <p>Building software that solves problems</p>
-      </article>
-    </div>
-  </div>
-        </section>
-        <!-- Screenshots of my completed assignments -->
-        <section id="work">
-          <div class="wrapper">
-            <div class="text_center">
-              <h2>My Completed Assignments</h2>
-              <p>Below are three assignments I completed while learning to code</p>
-              <div class="assignment-boxes">
+      </section>
+
+      <!-- Three careers I want to explore -->
+      <section id="about">
+        <div class="wrapper">
+          <div class="text_center">
+            <h2>My Future in Tech</h2>
+            <p class="career-subtitle">
+              Three careers I want to explore
+            </p>
+          </div>
+
+          <div class="career-boxes">
+            <article class="career-box">
+              <img
+                src="assets/OIP%20(4).webp"
+                alt="An example of user interface design"
+              />
+              <h3>UI Developer</h3>
+              <p>Creating beautiful, usable interfaces.</p>
+            </article>
+
+            <article class="career-box">
+              <img
+                src="https://img.freepik.com/premium-photo/female-developer-background_665280-9658.jpg?w=2000"
+                alt="A woman working as a developer"
+              />
+              <h3>Front-End Developer</h3>
+              <p>Bringing websites to life with code.</p>
+            </article>
+
+            <article class="career-box">
+              <img
+                src="https://assets.designtemplate.io/Website-Developer-Girl-Character-Illustration-700.webp"
+                alt="An illustration of a woman developing software"
+              />
+              <h3>Software Engineer</h3>
+              <p>Building software that solves problems.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Completed assignments -->
+      <section id="work">
+        <div class="wrapper">
+          <div class="text_center">
+            <h2>My Completed Assignments</h2>
+            <p>
+              Below are three assignments I completed while learning to code.
+            </p>
+          </div>
+
+          <div class="assignment-boxes">
             <figure class="assignment-box">
               <img
                 src="assets/assignment-1.png"
@@ -126,8 +156,8 @@
           </figure>
 
           <p>
-            I would love to visit Curaçao to enjoy the beaches, explore
-            the colorful buildings, and experience somewhere new.
+            I would love to visit Curaçao to enjoy the beaches,
+            explore the colorful buildings, and experience somewhere new.
           </p>
         </div>
       </section>

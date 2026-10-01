@@ -254,3 +254,13 @@ section#about {
   color: #333;
   --color-accent: #ffd700;
 }
+/* work section */
+.work_logos {
+  margin-top: var(--space-xl);
+}
+
+section#work {
+  background-color: #ffffff;
+  color: #333;
+  --color-accent:  #ffd700;
+}

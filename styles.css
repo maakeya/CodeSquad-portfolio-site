@@ -73,6 +73,7 @@ select {
 :focus {
   outline: 2px dashed #00ff19;
   outline-offset: 0.25rem;
+}
   /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
@@ -98,7 +99,6 @@ select {
   --space-xl: clamp(3.375rem, 3.2446rem + 0.6522vw, 3.75rem);
   --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
   --space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
-}
 }
 
 main:focus {
@@ -188,7 +188,7 @@ h5,
   text-decoration: none;
   color: #fff;
 }
-Hero styling:
+
 /* Hero section styling */
 .hero_content {
   padding: var(--space-3xl) 0;
@@ -208,12 +208,14 @@ section {
 }
 
 section#hero {
-  background: linear-gradient(rgba(26, 26, 64, 0.9), rgba(26, 26, 64, 0.9)),
+  min-height:100vh;
+  background-color: #fff0f5
+  background: linear-gradient(rgba(255, 240, 245, 0.3), rgba(255, 240, 245, 0.3)),
     url("/assets/background_image.jpg");
   padding-bottom: 4px;
   background-size: cover;
   background-position: top;
   background-attachment: scroll;
-  color: #fafafa;
-  --color-accent: #8a2be2;
+  color: #501635;
+  --color-accent: #501635;
 }

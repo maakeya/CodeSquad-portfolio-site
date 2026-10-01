@@ -1,307 +1,286 @@
-/* Basic page settings */
+/**
+ * CORE CONFIG
+ * This powers everything from utility class generation to breakpoints
+ * to enabling/disabling pre-built components/utilities.
+ */
+/* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #501635;
-  line-height: 1.6;
-  background-color: #fff0f5;
-  background-image:
-    linear-gradient(
-      rgba(255, 240, 245, 0.65),
-      rgba(255, 240, 245, 0.65)
-    ),
-    url("assets/77B16154-C04C-45AA-9F2D-D34D0595A1FD.png");
-  background-size: cover;
-  background-position: center;
-}
-
+/* Remove default margin */
+body,
 h1,
 h2,
 h3,
+h4,
 p,
-figure {
+figure,
+blockquote,
+dl,
+dd {
   margin: 0;
 }
 
-h1,
-h2,
-h3 {
-  font-family: Georgia, serif;
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: clamp(3rem, 8vw, 5.5rem);
-}
-
-h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 16px;
-}
-
-h3 {
-  font-size: 1.6rem;
-  margin-bottom: 12px;
-}
-
-p {
-  font-size: 1.1rem;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-a {
-  color: #501635;
-  text-underline-offset: 4px;
-}
-
-a:hover {
-  color: #9b315e;
-}
-
-a:focus-visible {
-  outline: 3px solid #9b315e;
-  outline-offset: 5px;
-}
-
-ul[role="list"] {
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
-/* Page width and layout */
-.wrapper {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  letter-spacing: -0.01em;
+}
+
+/* All elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+}
+
+:focus {
+  outline: 2px dashed #00ff19;
+  outline-offset: 0.25rem;
+}
+
+main:focus {
+  outline: none;
+}
+h1,
+.h1 {
+  font-size: var(--step-5);
+}
+
+h2,
+.h2 {
+  font-size: var(--step-4);
+}
+
+h3,
+.h3 {
+  font-size: var(--step-3);
+}
+
+h4,
+.h4 {
+  font-size: var(--step-2);
+}
+
+h5,
+.h5 {
+  font-size: var(--step-1);
+}
+/* define some constants */
+.flex {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+}
+@media (max-width: 468px) {
+  .flex {
+    flex-wrap: wrap;
+  }
+}
+.flex_center {
+  justify-content: center;
+}
+.flex_around {
+  justify-content: space-around;
+}
+.flex_between {
+  justify-content: space-between;
+}
+@media (max-width: 468px) {
+  .flex_around {
+    justify-content: center;
+  }
+  .flex_between {
+    justify-content: center;
+  }
+}
+.text_center {
+  text-align: center;
+}
+.text_right {
+  text-align: right;
+}
+
+/* define spacing */
+.padding-top-3xs {
+  padding: var(--space-3xs);
+}
+/* create the wrappers */
+.wrapper {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
 .wrapper_inner {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
 }
-
-.flex {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.flex_center {
-  justify-content: center;
-}
-
-.flex_between {
-  justify-content: space-between;
-}
-
-.text_center {
-  text-align: center;
-}
-
-section {
-  padding: 80px 24px;
-}
-
-/* Navigation */
+/* Style the header */
 .site_header {
-  padding: 20px 24px;
-  background-color: #ffe0eb;
-  border-bottom: 1px solid #edb3c6;
+  padding: var(--space-s) 0;
+  background: linear-gradient(rgba(26, 26, 64, 0.9), rgba(26, 26, 64, 0.9));
 }
 
-.site_header_nav a {
-  font-size: 0.9rem;
-  font-weight: bold;
+.site_header_nav ul li a {
   text-decoration: none;
+  color: #fff;
 }
-
-/* Name and hometown */
-#hero {
-  min-height: 85vh;
-  display: flex;
-  align-items: center;
-}
-
+/* Hero section styling */
 .hero_content {
-  padding: 60px 0;
+  padding: var(--space-3xl) 0;
 }
 
 .hero_content h1 {
-  margin-bottom: 20px;
-}
-
-.h5 {
-  font-size: 1.25rem;
+  margin-bottom: var(--space-s);
 }
 
 .hero_social {
-  margin-top: 40px;
+  padding-top: var(--space-3xl);
 }
 
-.hero_social a {
+/* General styling for the hero section */
+section {
+  padding: var(--space-2xl) var(--space-l);
+}
+
+section#hero {
+  background: linear-gradient(rgba(26, 26, 64, 0.9), rgba(26, 26, 64, 0.9)),
+    url("/assets/background_image.jpg");
+  padding-bottom: 4px;
+  background-size: cover;
+  background-position: top;
+  background-attachment: scroll;
+  color: #fafafa;
+  --color-accent: #8a2be2;
+}
+/* About section */
+.about_content {
+  padding: var(--space-xl) 0;
+  transform: skewX(-10deg);
+}
+
+@media (max-width: 468px) {
+  .about_content {
+    transform: skewX(0deg);
+  }
+}
+
+.about_figure {
+  padding: var(--space-xl) 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ccc;
   display: inline-block;
-  padding: 10px 18px;
-  border: 1px solid #501635;
-  border-radius: 24px;
-  background-color: #fffafb;
-  text-decoration: none;
+  padding: 5px;
 }
 
-.hero_social a:hover {
-  background-color: #ffe0eb;
-}
-
-/* Three tech career boxes */
-#about {
-  background-color: rgba(255, 240, 245, 0.8);
-}
-
-.career-subtitle {
-  margin-bottom: 36px;
-}
-
-.career-boxes {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-}
-
-.career-box {
-  padding: 24px;
-  text-align: center;
-  background-color: #fffafb;
-  border: 2px solid #f2c4d3;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(80, 22, 53, 0.08);
-}
-
-.career-box img {
-  width: 100%;
-  height: 180px;
+.about_img {
+  width: 300px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 24px;
 }
 
-/* Completed assignment screenshots */
-#work {
-  background-color: #ffe6ef;
+.about_caption {
+  padding: var(--space-3xs) 0;
 }
 
-#work .text_center {
-  margin-bottom: 36px;
+section#about {
+  background-color: #ffffff;
+  color: #333;
+  --color-accent: #ffd700;
+}
+/* work section */
+.work_logos {
+  margin-top: var(--space-xl);
 }
 
-.assignment-boxes {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: start;
-  gap: 24px;
+section#work {
+  background-color: #87ceeb;
+  color: #0c0c0c;
+  --color-accent: #2e8b57;
+}
+/* contact section */
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.assignment-box {
-  padding: 16px;
-  background-color: #fffafb;
-  border: 2px solid #f2c4d3;
-  border-radius: 18px;
-  box-shadow: 0 8px 20px rgba(80, 22, 53, 0.08);
+.form_group {
+  display: flex;
+  flex-direction: column;
 }
 
-.assignment-box img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.assignment-box figcaption {
-  padding: 16px 4px 4px;
-  text-align: center;
-  font-size: 1.1rem;
+label {
+  margin-bottom: 5px;
   font-weight: bold;
 }
 
-/* Curaçao travel section */
-#travel {
-  background-color: rgba(255, 250, 251, 0.85);
-}
-
-.travel-photo {
-  margin: 28px 0;
-  padding: 16px;
-  background-color: #ffffff;
-  border: 2px solid #f2c4d3;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(80, 22, 53, 0.08);
-}
-
-.travel-photo img {
+input[type="text"],
+input[type="email"],
+textarea {
   width: 100%;
-  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
 }
 
-.travel-photo figcaption {
-  padding-top: 12px;
-  text-align: center;
+textarea {
+  resize: vertical;
+  height: 150px;
 }
 
-#travel p {
-  text-align: center;
+button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
 }
 
-/* Footer */
-footer {
-  padding: 24px;
-  background-color: #ffe0eb;
-  border-top: 1px solid #edb3c6;
+button[type="submit"]:hover {
+  background-color: #0056b3;
 }
-
-/* Phone and tablet layout */
-@media (max-width: 800px) {
-  .career-boxes,
-  .assignment-boxes {
-    grid-template-columns: 1fr;
-  }
-
-  .career-boxes,
-  .assignment-boxes {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  .hero_social {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero_social ul {
-    justify-content: center;
-  }
-
-  section {
-    padding: 56px 20px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+/* footer section */
+section#footer {
+  padding: var(--space-l) var(--space-l);
 }

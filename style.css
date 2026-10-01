@@ -11,7 +11,6 @@
   font-family: sans-serif;
 }
 
-/* Remove default margin */
 body,
 h1,
 h2,
@@ -25,38 +24,36 @@ dd {
   margin: 0;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
   padding: 0;
 }
 
-/* Set core root defaults */
+
 html:focus-within {
   scroll-behavior: smooth;
 }
 
-/* Set core body defaults */
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   letter-spacing: -0.01em;
 }
 
-/* All elements that don't have a class get default styles */
+
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-/* Make images easier to work with */
+
 img,
 picture {
   max-width: 100%;
   display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
 input,
 button,
 textarea,
@@ -71,7 +68,7 @@ select {
 }
 
 :focus {
-  outline: 2px dashed #00ff19;
+  outline: 2px dashed #501635;
   outline-offset: 0.25rem;
 }
 
@@ -203,26 +200,7 @@ h5,
 section {
   padding: var(--space-2xl) var(--space-l);
 }
-
-section#hero {
-  background: linear-gradient(rgba(26/* Hero section styling */
-.hero_content {
-  padding: var(--space-3xl) 0;
-}
-
-.hero_content h1 {
-  margin-bottom: var(--space-s);
-}
-
-.hero_social {
-  padding-top: var(--space-3xl);
-}
-
-/* General styling for the hero section */
-section {
-  padding: var(--space-2xl) var(--space-l);
-}
-
+/* Pink floral background*/
 section#hero {
   min-height: 100vh;
   background-color: #fff0f5;
@@ -232,4 +210,18 @@ section#hero {
   background-repeat: no-repeat;
   color: #501635;
   --color-accent: #501635;
+}
+  .hero_social a {
+    color:#501635;
+  }
+  /* Smaller screens */
+  @media (max-width:468px) {
+    .flex {
+      flex-wrap: wrap;
+    }
+    .flex_around,
+    .flex_between {
+      justify-content:center;
+    }
+  }
   

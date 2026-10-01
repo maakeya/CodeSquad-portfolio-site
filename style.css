@@ -226,19 +226,10 @@ section {
 section#hero {
   min-height: 100vh;
   background-color: #fff0f5;
-  background-image: 
-  background: linear-gradient(rgba(255, 182, 193, 0.9), rgba(255, 182, 193, 0.9)),
-    url("/assets/background_image.jpg");
-  padding-bottom: 4px;
+  background-image: url("77B16154-C04C-45AA-9F2D-D34D0595A1FD.png");
   background-size: cover;
-  background-position: top;
-  background-attachment: scroll;
-  color: #fafafa;
-  --color-accent: #8a2be2;, 26, 64, 0.9), rgba(26, 26, 64, 0.9)),
-    url("/assets/background_image.jpg");
-  padding-bottom: 4px;
-  background-size: cover;
-  background-position: top;
-  background-attachment: scroll;
-  color: #fafafa;
-  --color-accent: #8a2be2;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #501635;
+  --color-accent: #501635;
+  

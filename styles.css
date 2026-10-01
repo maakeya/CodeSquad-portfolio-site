@@ -15,6 +15,7 @@ body {
   color: #501635;
   line-height: 1.6;
   background-color: #fff0f5;
+}
   background-image:
     linear-gradient(
       rgba(255, 240, 245, 0.65),
@@ -316,7 +317,7 @@ main > section {
 /*keep the other sections outside the hero*/
 #hero {
   display:block;
-  background-color: #fff0f5
+  background-color: #fff0f5;
 background-image: url("assets/77B16154-C04C-45AA-9F2D-D34D0595A1FD%20(1).png");
   background-size: cover;
   background-position: center;
